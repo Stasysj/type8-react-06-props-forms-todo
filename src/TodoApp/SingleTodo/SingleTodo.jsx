@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Icon from '../UI/Icon';
 
-function SingleTodo({ title }) {
-  const [isDone, setIsDone] = useState(false);
+function SingleTodo({ title, isDone: isDoneProp }) {
+  const [isDone, setIsDone] = useState(isDoneProp);
 
   // fa-check-circle => done todo
   // item line-through => done todo
