@@ -52,20 +52,26 @@
                 <mxCell id="9" value="&amp;lt;SingleTodo /&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="400" y="400" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="&amp;lt;SingleTodo /&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="560" y="400" width="120" height="60" as="geometry"/>
+                <mxCell id="24" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="16" target="23">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&amp;lt;SingleTodo /&amp;gt;&lt;br&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; background-color: rgb(25 , 53 , 73) ; font-family: &amp;#34;cascadia code&amp;#34; , &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 15px ; line-height: 20px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #e1efff&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot;color: #80ffbb&quot;&gt;Icon&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #9effff&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ffc600 ; font-style: italic&quot;&gt;onClick&lt;/span&gt;&lt;span style=&quot;color: #ff9d00&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #e1efff&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;color: #ffc600&quot;&gt;clickHandler&lt;/span&gt;&lt;span style=&quot;color: #e1efff&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;color: rgb(225 , 239 , 255)&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="400" width="390" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="&amp;lt;Icon /&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="-120" y="510" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="STATE: &lt;br&gt;isDone = false" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="20" value="STATE: &lt;br&gt;isDone = false" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="120" y="440" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="O click isDone = true" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="21" value="O click isDone = true" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="120" y="480" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="O click isDone = false" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="22" value="O click isDone = false" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="120" y="520" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&amp;lt;Icon props.onClick /&amp;gt;&lt;br&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; background-color: rgb(25 , 53 , 73) ; font-family: &amp;#34;cascadia code&amp;#34; , &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-size: 15px ; line-height: 20px&quot;&gt;&lt;span style=&quot;color: #e1efff&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot;color: #9effff&quot;&gt;i&lt;/span&gt;&lt;span style=&quot;color: #9effff&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #ffc600 ; font-style: italic&quot;&gt;onClick&lt;/span&gt;&lt;span style=&quot;color: #ff9d00&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #e1efff&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;color: #e1efff&quot;&gt;onClick&lt;/span&gt;&lt;span style=&quot;color: #e1efff&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;color: #e1efff&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&quot;color: #9effff&quot;&gt;i&lt;/span&gt;&lt;span style=&quot;color: #e1efff&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="590" width="310" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
