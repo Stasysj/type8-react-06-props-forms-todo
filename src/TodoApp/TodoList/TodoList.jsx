@@ -10,13 +10,7 @@ function TodoList() {
     <section className='content'>
       <ul id='list' className='list'>
         <SingleTodo {...initTodos[0]} />
-
-        <li className='item line-through'>
-          <i className='fa fa-check-circle make-done' aria-hidden='true'></i>
-          <span className='text'> done todo</span>
-          <i className='fa fa-pencil edit-icon' aria-hidden='true'></i>
-          <i className='fa fa-trash delete-icon' aria-hidden='true'></i>
-        </li>
+        <SingleTodo {...initTodos[1]} />
       </ul>
       <div className='add-item'>
         <i id='add-todo-btn' className='fa fa-plus-circle' aria-hidden='true'></i>
