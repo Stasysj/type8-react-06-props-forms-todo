@@ -19,12 +19,9 @@ function TodoList() {
   function handleToggleTodo(toggleId) {
     // console.log('handleToggleTodo happened', toggleId);
     // pasidarom todoArray deeper kopija
-    const mainTodoArrayCopy = mainTodoArray.map((tObj) => {
-      if (tObj.id === toggleId) {
-        return { ...tObj, isDone: !tObj.isDone };
-      }
-      return { ...tObj };
-    });
+    // const mainTodoArrayCopy = mainTodoArray.map((tObj) =>
+    //   tObj.id === toggleId ? { ...tObj, isDone: !tObj.isDone } : { ...tObj }
+    // );
     // // paiesiskom todoArray kopijoj objekto su id lygiu id(argumenta)
     // const found = mainTodoArrayCopy.find((tObj) => tObj.id === toggleId);
     // console.log('found ===', found);
@@ -32,7 +29,11 @@ function TodoList() {
     // found.isDone = !found.isDone;
 
     // atnaujinam state su kopija pakeistu objektu
-    setMainTodoArray(mainTodoArrayCopy);
+    setMainTodoArray((prevTodoArray) =>
+      prevTodoArray.map((tObj) =>
+        tObj.id === toggleId ? { ...tObj, isDone: !tObj.isDone } : { ...tObj }
+      )
+    );
   }
 
   // delete
