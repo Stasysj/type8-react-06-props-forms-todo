@@ -24,6 +24,11 @@ function TodoList() {
   // atnaujinti state su kopija state kurioje nera to el kuri trynem
   function handleDelete(deleteId) {
     console.log('handleDelete was initiated by todo with id', deleteId);
+
+    // isfiltruoti mainTodoArray ir gauti masyva kuriame nera objeto kurio id === deleteId
+    const filtered = mainTodoArray.filter((tObj) => tObj.id !== deleteId);
+    console.log('filtered ===', filtered);
+    setMainTodoArray(filtered);
   }
 
   return (
