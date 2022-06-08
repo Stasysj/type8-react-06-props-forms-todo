@@ -1,5 +1,6 @@
 import SingleTodo from '../SingleTodo/SingleTodo';
 import { useState } from 'react';
+import AddTodo from '../AddTodo/AddTodo';
 
 const initTodos = [
   { id: 1, title: 'Do Sports', isDone: true },
@@ -11,6 +12,10 @@ function TodoList() {
   const [mainTodoArray, setMainTodoArray] = useState(initTodos);
 
   // sukurti funkcija kuri prideda nauja todo
+  // iskviesti handleAddTodo esancia TodoList is AddTodo.jsx
+  function handleAddTodo() {
+    console.log('handleAddTodo called');
+  }
   // { id: 3, title: 'Buy Sugar', isDone: false }
   // iskvieciam funkcija su myguko paspaudimu
 
@@ -24,7 +29,7 @@ function TodoList() {
     });
     // paiesiskom todoArray kopijoj objekto su id lygiu id(argumenta)
     const found = mainTodoArrayCopy.find((tObj) => tObj.id === toggleId);
-    console.log('found ===', found);
+    // console.log('found ===', found);
     // surade todo objekta pakeicia jo isDone i priesinga
     found.isDone = !found.isDone;
 
@@ -55,10 +60,7 @@ function TodoList() {
           />
         ))}
       </ul>
-      <div className='add-item'>
-        <i id='add-todo-btn' className='fa fa-plus-circle' aria-hidden='true'></i>
-        <input type='text' id='input' placeholder='Add todo' />
-      </div>
+      <AddTodo onAddTodo={handleAddTodo} />
     </section>
   );
 }
