@@ -17,12 +17,20 @@ function TodoList() {
   // sukurti funkcija toggleTodo(id)
   // iskviesti handleToggleTodo kai pasdauziam ant burbuliuko
   function handleToggleTodo(toggleId) {
-    console.log('handleToggleTodo happened', toggleId);
+    // console.log('handleToggleTodo happened', toggleId);
+    // pasidarom todoArray deeper kopija
+    const mainTodoArrayCopy = mainTodoArray.map((tObj) => {
+      return { ...tObj };
+    });
+    // paiesiskom todoArray kopijoj objekto su id lygiu id(argumenta)
+    const found = mainTodoArrayCopy.find((tObj) => tObj.id === toggleId);
+    console.log('found ===', found);
+    // surade todo objekta pakeicia jo isDone i priesinga
+    found.isDone = !found.isDone;
+
+    // atnaujinam state su kopija pakeistu objektu
+    setMainTodoArray(mainTodoArrayCopy);
   }
-  // pasidarom todoArray kopija
-  // paiesiskom todoArray kopijoj objekto su id lygiu id(argumenta)
-  // surade todo objekta pakeicia jo isDone i priesinga
-  // atnaujinam state su kopija pakeistu objektu
 
   // delete
   // atnaujinti state su kopija state kurioje nera to el kuri trynem
