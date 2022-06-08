@@ -15,6 +15,10 @@ function TodoList() {
   // iskvieciam funkcija su myguko paspaudimu
 
   // sukurti funkcija toggleTodo(id)
+  // iskviesti handleToggleTodo kai pasdauziam ant burbuliuko
+  function handleToggleTodo(toggleId) {
+    console.log('handleToggleTodo happened', toggleId);
+  }
   // pasidarom todoArray kopija
   // paiesiskom todoArray kopijoj objekto su id lygiu id(argumenta)
   // surade todo objekta pakeicia jo isDone i priesinga
@@ -35,7 +39,12 @@ function TodoList() {
     <section className='content'>
       <ul id='list' className='list'>
         {mainTodoArray.map((tObj) => (
-          <SingleTodo key={tObj.id} {...tObj} onDelete={handleDelete} />
+          <SingleTodo
+            key={tObj.id}
+            {...tObj}
+            onDelete={handleDelete}
+            onToggle={handleToggleTodo}
+          />
         ))}
       </ul>
       <div className='add-item'>
