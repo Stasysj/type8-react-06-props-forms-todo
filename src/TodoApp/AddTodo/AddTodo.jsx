@@ -9,10 +9,12 @@ function AddTodo(props) {
   // kai AddTodo kvieciam handleAddTodo argumentu paduojam input reiksme (isState)
 
   function handleNewTodo() {
+    // console.log('inputEl.current.value ===', inputEl.current.value);
+    inputEl.current.focus();
+    if (newTodoInput === '') return;
     props.onAddTodo(newTodoInput);
     setNewTodoInput('');
     // sufokusuoti kursoriu i input
-    inputEl.current.focus();
   }
 
   return (
