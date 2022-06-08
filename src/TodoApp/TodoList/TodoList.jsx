@@ -8,13 +8,19 @@ const initTodos = [
   { id: 3, title: 'Buy Sugar', isDone: false },
 ];
 
+function uuid() {
+  return 'td_' + Math.random().toString().split('.')[1];
+}
+
 function TodoList() {
   const [mainTodoArray, setMainTodoArray] = useState(initTodos);
 
   // sukurti funkcija kuri prideda nauja todo
   // iskviesti handleAddTodo esancia TodoList is AddTodo.jsx
-  function handleAddTodo() {
-    console.log('handleAddTodo called');
+  function handleAddTodo(titleFromInput) {
+    console.log('handleAddTodo called', titleFromInput);
+    const newTodoItem = { id: uuid(), title: titleFromInput, isDone: false };
+    setMainTodoArray((prevTodoArr) => [...prevTodoArr, newTodoItem]);
   }
   // { id: 3, title: 'Buy Sugar', isDone: false }
   // iskvieciam funkcija su myguko paspaudimu
