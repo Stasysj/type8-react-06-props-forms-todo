@@ -12,7 +12,7 @@ function uuid() {
   return 'td_' + Math.random().toString().split('.')[1];
 }
 
-function TodoList() {
+function TodoList(props) {
   const [mainTodoArray, setMainTodoArray] = useState(initTodos);
 
   // sukurti funkcija kuri prideda nauja todo

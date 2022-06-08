@@ -11,6 +11,7 @@ function AddTodo(props) {
   function handleNewTodo() {
     // console.log('inputEl.current.value ===', inputEl.current.value);
     inputEl.current.focus();
+    // TODO: show error on empty input
     if (newTodoInput === '') return;
     props.onAddTodo(newTodoInput);
     setNewTodoInput('');
