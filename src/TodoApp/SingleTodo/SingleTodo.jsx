@@ -33,8 +33,8 @@ function SingleTodo({ id, title, isDone: isDoneProp, onDelete, onToggle, onUpdat
           value={editedTitle}
         />
       )}
+      {isDoneProp === false && <Icon onClick={singleTodoEdit} icon='fa-pencil' />}
 
-      <Icon onClick={singleTodoEdit} icon='fa-pencil' />
       <Icon onClick={() => onDelete(id)} icon='fa-trash' />
     </li>
   );
