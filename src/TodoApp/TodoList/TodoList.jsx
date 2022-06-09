@@ -22,6 +22,7 @@ function TodoList(props) {
             {...tObj}
             onDelete={props.onDelete}
             onToggle={props.onTogleTodo}
+            onUpdateTodo={props.onUpdateTodo}
           />
         ))}
       </ul>

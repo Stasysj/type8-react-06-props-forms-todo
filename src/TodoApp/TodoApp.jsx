@@ -55,20 +55,43 @@ function TodoApp() {
     console.log('filtered ===', filtered);
     setMainTodoArray(filtered);
   }
+  function handleUpdateTodo(updaTodoIf, udatedTitle) {
+    console.log('Editinam', updaTodoIf, udatedTitle);
+    // const mainTodoArrayCopy = mainTodoArray.map((tObj) => {
+    //   return { ...tObj };
+    // });
+    // const found = mainTodoArrayCopy.find((tObj) => tObj.id === updaTodoIf);
+    setMainTodoArray((prevMainTodArr) =>
+      prevMainTodArr.map((tObj) => {
+        if (tObj.id === updaTodoIf) {
+          return { ...tObj, title: udatedTitle };
+        }
+        return { ...tObj };
+      })
+    );
+  }
+
+  function handleResetTodo() {
+    setMainTodoArray([]);
+  }
   /** 1 / 5
    * {done: 1
    *  total: 5
    * }
    */
-  function doneNotDoneTodos() {}
+  // compiuted properties
+  // function doneNotDoneTodos() {}
+  // const doneTodos = mainTodoArray.filter((tObj) => tObj.isDone === true).length;
+  const doneTodos = mainTodoArray.filter(({ isDone }) => isDone).length;
   return (
     <div className='container'>
-      <Header />
+      <Header onResetTodo={handleResetTodo} total={mainTodoArray.length} doneTodos={doneTodos} />
       <TodoList
         todos={mainTodoArray}
         onAddTodo={handleAddTodo}
         onTogleTodo={handleToggleTodo}
         onDelete={handleDelete}
+        onUpdateTodo={handleUpdateTodo}
       />
     </div>
   );
